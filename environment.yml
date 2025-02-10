@@ -8,7 +8,6 @@ channels:
 dependencies:
   - python=3.8
   - cudatoolkit=11.7
-  - nvidia-tensorflow  # Optimized for NVIDIA GPUs via Conda
   - numpy
   - tqdm
   - sacrebleu
@@ -17,4 +16,5 @@ dependencies:
   - pytorch-mutex=1.0=cuda  # Avoid conflicts
   - pip
   - pip:
-    - git+https://github.com/NVIDIA/apex.git  # Install Apex from source
+    - apex  # Install Apex from source
+    - tensorflow  # Optimized for NVIDIA GPUs via Conda
