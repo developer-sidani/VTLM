@@ -1,0 +1,20 @@
+name: vtlm
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - python=3.8
+  - cudatoolkit=11.7
+  - nvidia-tensorflow  # Optimized for NVIDIA GPUs via Conda
+  - numpy
+  - tqdm
+  - sacrebleu
+  - pytorch=1.13.1=py3.8_cuda11.7_cudnn8.5.0_0  # Match existing PyTorch/CUDA
+  - torchvision=0.14.1=py38_cu117
+  - pytorch-mutex=1.0=cuda  # Avoid conflicts
+  - pip
+  - pip:
+    - git+https://github.com/NVIDIA/apex.git  # Install Apex from source
